@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+/* --- พื้นฐาน --- */
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    margin: 0; padding: 0;
+}
+
+body {
+    background: #222;
+    display: flex; justify-content: center; align-items: center;
+    min-height: 100vh;
+}
+
+.iphone-device {
+    width: 393px; height: 852px;
+    background: #fff;
+    border: 8px solid #333; border-radius: 50px;
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+}
+
+/* Header สีขาว */
+.header-container { background: #fff; z-index: 100; flex-shrink: 0; }
+.dynamic-island { width: 120px; height: 35px; background: #000; margin: 15px auto 5px; border-radius: 20px; }
+.header-nav { display: flex; align-items: center; padding: 10px 20px 15px; }
+
+.search-bar {
+    display: flex; align-items: center; background: #f1f3f4;
+    padding: 8px 12px; border-radius: 12px; flex: 1; margin-right: 15px;
+}
+.search-bar i { color: #999; margin-right: 10px; font-size: 14px; }
+.search-input { border: none; background: transparent; outline: none; width: 100%; font-size: 14px; color: #333; }
+.fa-bars { font-size: 20px; color: #ccc; cursor: pointer; }
+
+/* Content Area - ไล่เฉดสีตามหน้าอื่น */
+.content { 
+    flex: 1; 
+    background: linear-gradient(to bottom, #7BFFA2 0%, #EBEBEB 60%) !important; 
+    overflow-y: auto; scrollbar-width: none;
+}
+.content::-webkit-scrollbar { display: none; }
+
+/* Profile Section - กลับมาใช้สีเดิมของคุณ */
+.profile-header {
+    background: #99f6c4; /* สีเขียวสว่างเดิมของคุณ */
+    padding: 40px 25px;
+    border-radius: 0 0 35px 35px;
+    margin-bottom: 20px;
+}
+.user-info { display: flex; align-items: center; gap: 20px; }
+.avatar-box { 
+    width: 80px; height: 80px; background: #fff; 
+    border-radius: 50%; overflow: hidden; 
+    display: flex; align-items: center; justify-content: center;
+}
+/* ไอคอนขนาดเดิม สีเดิม */
+.avatar-box i { font-size: 80px; color: #ccc; }
+
+.user-text h1 { font-size: 22px; font-weight: 700; color: #1a202c; }
+.user-text p { font-size: 13px; color: #4a5568; margin-top: 4px; }
+
+/* Menu Groups */
+.menu-container { padding: 0 20px; }
+.menu-group { 
+    background: #fff; border-radius: 18px; 
+    margin-bottom: 12px; overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+.menu-item { 
+    display: flex; align-items: center; 
+    padding: 16px 20px; border-bottom: 1px solid #f7fafc;
+    cursor: pointer;
+}
+.menu-item:last-child { border-bottom: none; }
+
+.menu-item i { 
+    width: 24px; font-size: 18px; 
+    color: #4a5568; margin-right: 12px; 
+    text-align: center;
+}
+.menu-item span { font-weight: 500; font-size: 15px; color: #2d3748; }
+
+/* Footer */
+.footer-nav { 
+    height: 80px; background: #fff; border-top: 1px solid #edf2f7;
+    display: flex; justify-content: space-around; align-items: center; 
+}
+.footer-nav i { font-size: 22px; color: #cbd5e0; cursor: pointer; }
+.footer-nav i.active { color: #2d3748; }
